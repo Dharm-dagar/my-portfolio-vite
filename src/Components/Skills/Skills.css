@@ -1,0 +1,38 @@
+.skills-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #000000, #1a1a1a);
+  color: #fff;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.skill-item label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.progress-bar {
+  height: 6px;
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: cyan;
+  border-radius: 4px;
+  transition: width 0.5s ease-in-out;
+}

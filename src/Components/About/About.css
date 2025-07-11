@@ -1,0 +1,98 @@
+.about {
+  width: 90%;
+  margin: 150px auto;
+  max-width: 1200px;
+}
+
+.about__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section__heading {
+  font-size: 4rem;
+  margin: 10px 0;
+  color: #e9e9f8;
+}
+
+.about__text {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #93939f;
+  width: 100%;
+  max-width: 700px;
+}
+
+.about__buttons {
+  margin-top: 2rem;
+}
+
+.resume-btn {
+  padding: 10px 24px;
+  background: linear-gradient(to right, #00bcd4, #0d47a1);
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+}
+
+.resume-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+}
+
+.about__sectionImage {
+  width: 35%;
+  max-width: 350px;
+}
+
+@media screen and (max-width: 1000px) {
+  .about__section {
+    flex-direction: column;
+  }
+
+  .about__sectionImage {
+    width: 60%;
+    margin: 30px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section__heading {
+    font-size: 3.5rem;
+  }
+
+  .about {
+    margin: 100px auto;
+  }
+
+  .about__text {
+    margin-top: 30px;
+  }
+
+  .about__button {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+
+  .about__quote {
+    font-size: 1.2rem;
+  }
+
+  .about__quoteAuthor {
+    font-size: 1rem;
+  }
+
+  .resume-btn {
+    font-size: 1rem;
+    padding: 8px 20px;
+    gap: 6px;
+  }
+}

@@ -1,0 +1,136 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  padding: 10px 0;
+  background: radial-gradient(circle at center, #1a1a1a 10%, #000 90%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.main__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Logo Styling */
+.navbar__logo {
+  font-family: 'Cursive', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: orange;
+}
+
+/* Desktop Nav */
+.navbar__list--desktop {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 32px;
+}
+
+.navbar__list--desktop li a {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  color: #f0f0f0;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.navbar__list--desktop li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #18babd;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar__list--desktop li a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar__list--desktop li a:hover {
+  color: #18babd;
+}
+
+/* Contact Button in Navbar */
+.navbar__contactBtn {
+  padding: 8px 20px;
+  background: linear-gradient(to right, #4facfe, #6143dc);
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar__contactBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(79, 172, 254, 0.3);
+}
+
+/* Mobile Icon */
+.navbar__mobile--icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+}
+
+/* Mobile Menu */
+.navbar__list--mobile {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .navbar__list--desktop {
+    display: none;
+  }
+
+  .navbar__mobile--icon {
+    display: inline;
+    cursor: pointer;
+  }
+
+  .navbar__list--mobile {
+    display: block;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    height: 0;
+    z-index: 999;
+  }
+
+  .navbar__list--mobileShow {
+    height: 220px;
+  }
+
+  .navbar__list--mobile li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    color: #eee;
+    font-size: 1.1rem;
+    text-decoration: none;
+  }
+
+  .navbar__list--mobile li a:hover {
+    background: #333;
+  }
+}
