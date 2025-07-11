@@ -37,12 +37,11 @@ function App() {
         <>
           <Header />
           <Home />
-          <Projects />
           <About />
+          <Projects />
           <Skills />
            <TechTimeline />
           <Contact />
-         
           <Footer />
         </>
       )}
